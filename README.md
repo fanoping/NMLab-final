@@ -8,10 +8,10 @@ Networking and Multimedia Lab (2018 Spring) at National Taiwan University
     * Scenario A
         
         ```
-            python classifierA.py --arch [knn, tree] 
+            python classifierA.py -k 10 --arch [knn, tree] 
         ```
     * Scenario B
     
         ```
-            python classifierB.py --arch [knn, tree, forest] 
+            python classifierB.py -k 10 --arch [knn, tree, forest] 
         ```

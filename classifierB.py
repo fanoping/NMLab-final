@@ -10,8 +10,8 @@ def main(args):
     """
         Scenario B:
             Feature extractor: CfsSubsetEval+BestFirst (SE+BF)
-            Classifier: K nearest neighboring, decision tree classifier
-            Validation: 10-folded cross validation
+            Classifier: K nearest neighboring (K = 3), decision tree classifier, random forest
+            Validation: k-folded cross validation
     """
     data = pd.read_csv('CSV/Scenario-B/TimeBasedFeatures-10s-Layer2.csv')
 
@@ -41,7 +41,7 @@ def main(args):
         split = np.array_split(train_x, k_fold)
         split_label = np.array_split(label, k_fold)
 
-        for val_idx in range(k):
+        for val_idx in range(k_fold):
             train = [split[idx] for idx in range(len(split)) if idx != val_idx]
             valid = split[val_idx]
 
@@ -49,8 +49,7 @@ def main(args):
             valid_label = split_label[val_idx]
             yield train, valid, train_label, valid_label
 
-    k = 10
-    splitted_data = list(k_fold_cross_validation(k, train_x, train_label))
+    splitted_data = list(k_fold_cross_validation(args.k, train_x, train_label))
 
     for idx, (train, valid, train_label, valid_label) in enumerate(splitted_data):
         if args.arch.lower() == 'knn':
@@ -70,7 +69,9 @@ def main(args):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser('Classifier for Scenario A')
+    parser = argparse.ArgumentParser('Classifier for Scenario B')
+    parser.add_argument('-k', default=10, type=int,
+                        help='k folded cross validation')
     parser.add_argument('--arch', default='knn', type=str,
                         help='classification method [knn, tree, forest]')
     main(parser.parse_args())
