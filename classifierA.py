@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import confusion_matrix, precision_score, recall_score
 import argparse
 
 
@@ -14,6 +15,7 @@ def main(args):
     """
     data = pd.read_csv('CSV/Scenario-A/SelectedFeatures-10s-TOR-NonTOR.csv')
 
+    # attributes
     min_flowiat = data['Flow IAT Min']
     std_biat = data['Bwd IAT Std']
     mean_biat = data['Bwd IAT Mean']
@@ -50,7 +52,12 @@ def main(args):
         train_label = np.concatenate(train_label)
         neigh.fit(train, train_label)
         score = neigh.score(valid, valid_label)
-        print('{} fold score: {:.6f}'.format(idx+1, score))
+        print(confusion_matrix(valid_label, neigh.predict(valid)))
+        print('{} fold:'.format(idx+1))
+        print('\tAccuracy: {:.6f}'.format(score))
+        print('\tPrecision: {:.6f}'.format(precision_score(valid_label, neigh.predict(valid), average='micro')))
+        print('\tRecall: {:.6f}'.format(recall_score(valid_label, neigh.predict(valid), average='micro')))
+
 
 
 if __name__ == '__main__':
