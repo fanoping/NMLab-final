@@ -52,7 +52,7 @@ def main(args):
         train_label = np.concatenate(train_label)
         neigh.fit(train, train_label)
         score = neigh.score(valid, valid_label)
-        print(confusion_matrix(valid_label, neigh.predict(valid)))
+
         print('{} fold:'.format(idx+1))
         print('\tAccuracy: {:.6f}'.format(score))
         print('\tPrecision: {:.6f}'.format(precision_score(valid_label, neigh.predict(valid), average='micro')))
