@@ -3,7 +3,7 @@ Networking and Multimedia Lab (2018 Spring) at National Taiwan University
 
 * **Usage**: 
 
-    choose arch from [..] ()K-nearest neighboring, decision tree)
+    choose arch from [...] (K-nearest neighboring, decision tree, random forest for Scenario B)
  
     * Scenario A
         
@@ -13,5 +13,5 @@ Networking and Multimedia Lab (2018 Spring) at National Taiwan University
     * Scenario B
     
         ```
-            python classifierB.py --arch [knn, tree] 
+            python classifierB.py --arch [knn, tree, forest] 
         ```

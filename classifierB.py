@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
 import argparse
 
 
@@ -56,8 +57,10 @@ def main(args):
             neigh = KNeighborsClassifier(n_neighbors=3)
         elif args.arch.lower() == 'tree':
             neigh = DecisionTreeClassifier()
+        elif args.arch.lower() == 'forest':
+            neigh = RandomForestClassifier(n_estimators=20, random_state=2)
         else:
-            return NotImplementedError
+            raise NotImplementedError(args.arch)
 
         train = np.concatenate(train)
         train_label = np.concatenate(train_label)
@@ -69,5 +72,5 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Classifier for Scenario A')
     parser.add_argument('--arch', default='knn', type=str,
-                        help='classification method [knn, tree]')
+                        help='classification method [knn, tree, forest]')
     main(parser.parse_args())
