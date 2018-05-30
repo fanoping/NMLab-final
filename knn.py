@@ -2,8 +2,14 @@ import pandas as pd
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 
+"""
+    Scenario A, 
+    Feature extractor: CfsSubsetEval+BestFirst (SE+BF)
+    using K nearest neighboring, 10-folded cross validation
+"""
 
-data = pd.read_csv('CSV/Scenario-A/SelectedFeatures-10s-TOR-NonTOR.csv', dtype={' Flow IAT Min': int,' Bwd IAT Std': float, 'Bwd IAT Mean': float, ' Bwd IAT Max': float, 'label': str})
+data = pd.read_csv('CSV/Scenario-A/SelectedFeatures-10s-TOR-NonTOR.csv')
+
 min_flowiat = data[' Flow IAT Min']
 std_biat = data[' Bwd IAT Std']
 mean_biat = data['Bwd IAT Mean']
@@ -34,26 +40,28 @@ zeros = np.zeros(predict.shape)
 print(np.mean(np.array(predict==zeros)))
 """
 
+
+def k_fold_cross_validation(k_fold, train_x, label):
+    split = np.array_split(train_x, k_fold)
+    split_label = np.array_split(label, k_fold)
+
+    for val_idx in range(k):
+        train = [split[idx] for idx in range(len(split)) if idx != val_idx]
+        valid = split[val_idx]
+
+        train_label = [split_label[idx] for idx in range(len(split_label)) if idx != val_idx]
+        valid_label = split_label[val_idx]
+        yield train, valid, train_label, valid_label
+
+
 k = 10
-split = np.array_split(train_x, k)
-split_label = np.array_split(train_label, k)
-
-def k_fold_cross_validation(k):
-	for i in range(k):
-		train = [split[l] for l in range(len(split)) if l != i]
-		valid = split[i]
-
-		train_label = [split_label[l] for l in range(len(split_label)) if l != i] 
-		valid_label = split_label[i]
-		yield train, valid, train_label, valid_label
-
-splitted_data = list(k_fold_cross_validation(k))
+splitted_data = list(k_fold_cross_validation(k, train_x, train_label))
 
 
 for idx, (train, valid, train_label, valid_label) in enumerate(splitted_data):
-	neigh = KNeighborsClassifier(n_neighbors=3)
-	train = np.concatenate(train)
-	train_label = np.concatenate(train_label)
-	neigh.fit(train, train_label)
-	score = neigh.score(valid, valid_label)
-	print('{0:2d} fold score: {:.6f}'.format(idx+1, score))
+    neigh = KNeighborsClassifier(n_neighbors=3)
+    train = np.concatenate(train)
+    train_label = np.concatenate(train_label)
+    neigh.fit(train, train_label)
+    score = neigh.score(valid, valid_label)
+    print('{} fold score: {:.6f}'.format(idx+1, score))
