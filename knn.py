@@ -10,10 +10,10 @@ from sklearn.neighbors import KNeighborsClassifier
 
 data = pd.read_csv('CSV/Scenario-A/SelectedFeatures-10s-TOR-NonTOR.csv')
 
-min_flowiat = data[' Flow IAT Min']
-std_biat = data[' Bwd IAT Std']
+min_flowiat = data['Flow IAT Min']
+std_biat = data['Bwd IAT Std']
 mean_biat = data['Bwd IAT Mean']
-max_biat = data[' Bwd IAT Max']
+max_biat = data['Bwd IAT Max']
 label = data['label']
 
 
