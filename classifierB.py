@@ -52,6 +52,7 @@ def main(args):
 
     splitted_data = list(k_fold_cross_validation(args.k, train_x, train_label))
 
+    total = 0
     for idx, (train, valid, train_label, valid_label) in enumerate(splitted_data):
         if args.arch.lower() == 'knn':
             neigh = KNeighborsClassifier(n_neighbors=3)
@@ -66,16 +67,19 @@ def main(args):
         train_label = np.concatenate(train_label)
         neigh.fit(train, train_label)
         score = neigh.score(valid, valid_label)
-        
+
         print('{} fold:'.format(idx + 1))
         print('\tAccuracy: {:.6f}'.format(score))
-        print('\tPrecision: {:.6f}'.format(precision_score(valid_label, neigh.predict(valid), average='micro')))
-        print('\tRecall: {:.6f}'.format(recall_score(valid_label, neigh.predict(valid), average='micro')))
+        # print('\tPrecision: {:.6f}'.format(precision_score(valid_label, neigh.predict(valid), average='micro')))
+        # print('\tRecall: {:.6f}'.format(recall_score(valid_label, neigh.predict(valid), average='micro')))
+
+        total += score
+    print("Ave:", total/args.k)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Classifier for Scenario B')
-    parser.add_argument('-k', default=10, type=int,
+    parser.add_argument('-k', default=20, type=int,
                         help='k folded cross validation')
     parser.add_argument('--arch', default='knn', type=str,
                         help='classification method [knn, tree, forest]')

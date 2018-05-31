@@ -40,6 +40,7 @@ def main(args):
 
     splitted_data = list(k_fold_cross_validation(args.k, train_x, train_label))
 
+    total = 0
     for idx, (train, valid, train_label, valid_label) in enumerate(splitted_data):
         if args.arch.lower() == 'knn':
             neigh = KNeighborsClassifier(n_neighbors=3)
@@ -55,9 +56,11 @@ def main(args):
 
         print('{} fold:'.format(idx+1))
         print('\tAccuracy: {:.6f}'.format(score))
-        print('\tPrecision: {:.6f}'.format(precision_score(valid_label, neigh.predict(valid), average='micro')))
-        print('\tRecall: {:.6f}'.format(recall_score(valid_label, neigh.predict(valid), average='micro')))
+        # print('\tPrecision: {:.6f}'.format(precision_score(valid_label, neigh.predict(valid))))
+        # print('\tRecall: {:.6f}'.format(recall_score(valid_label, neigh.predict(valid))))
 
+        total += score
+    print("Ave: {:.6f}".format(total / args.k))
 
 
 if __name__ == '__main__':
