@@ -99,7 +99,7 @@ if __name__ == '__main__':
                         help='k folded cross validation')
     parser.add_argument('--train-csv', default='CSV/Scenario-B/TimeBasedFeatures-10s-Layer2.csv',
                         help='input information from csv file')
-    parser.add_argument('--test-csv', default='realtime.pcap_Flow.csv',
+    parser.add_argument('--test-csv', default='realtime0.pcap_Flow.csv',
                         help='input information from csv file for testing')
     parser.add_argument('--config', default='config.json',
                         help='specify the selected feature')
