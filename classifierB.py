@@ -24,17 +24,14 @@ def main(args):
 
     # labels
     label = csv_file["label"] if config["label"] else ValueError("No label specified!")
-    test_label = test_csv_file["label"] if config["label"] else ValueError("No label specified!")
     labels = {'BROWSING': 0, 'AUDIO': 1, 'CHAT': 2, 'MAIL': 3, 'P2P': 4,
-              'FILE-TRANSFER': 5, 'VOIP': 6, 'VIDEO': 7, 'No Label': 8}
+              'FILE-TRANSFER': 5, 'VOIP': 6, 'VIDEO': 7}
 
     train_x = np.array(attributes).T
     train_label = [labels[item] for item in label]
     train_label = np.array(train_label).T
 
     test_x = np.array(test_attributes).T
-    test_label = [labels[item] for item in test_label]
-    test_label = np.array(test_label).T
 
     def k_fold_cross_validation(k_fold, train_x, label):
         split = np.array_split(train_x, k_fold)
