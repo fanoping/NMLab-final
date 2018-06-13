@@ -6,6 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, precision_score, recall_score
 import argparse
 import json
+import os
 
 
 def main(args):
@@ -88,7 +89,8 @@ def main(args):
             output_data[flow_id][name] = attr[index]
         output_data[flow_id]['Result'] = [key for key, value in labels.items() if predict[idx] == value][0]
 
-    with open("output/scenarioB/{}.json".format(args.test_csv[:-4]), "w") as f:
+    _, filename = os.path.split(args.test_csv)
+    with open("output/scenarioB/.json".format(filename[:-4]), "w") as f:
         json.dump(output_data, f, indent=4, sort_keys=False)
 
     return output_data

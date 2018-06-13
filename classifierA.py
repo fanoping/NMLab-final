@@ -5,6 +5,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import confusion_matrix, precision_score, recall_score
 import json
 import argparse
+import os
 
 
 def main(args):
@@ -77,7 +78,8 @@ def main(args):
             output_data[flow_id][name] = attr[index]
         output_data[flow_id]['Result'] = 'TOR' if predict[idx] else 'nonTOR'
 
-    with open("output/scenarioA/{}.json".format(args.test_csv[:-4]), "w") as f:
+    _, filename = os.path.split(args.test_csv)
+    with open("output/ScenarioA/{}.json".format(filename[:-4]), "w") as f:
         json.dump(output_data, f, indent=4, sort_keys=False)
 
     return output_data
