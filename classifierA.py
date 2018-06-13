@@ -19,18 +19,14 @@ def main(args):
     config = json.load(open(args.config))['Scenario-A']
 
     attributes = [train_csv_file[attr] for attr, usage in config["attribute"].items() if usage]
-    label = train_csv_file["label"] if config["label"] else ValueError("No label specified!")
+    label = train_csv_file["Label"] if config["Label"] else ValueError("No label specified!")
 
     train_x = np.array(attributes).T
     train_label = [1 if item == 'TOR' else 0 for item in label]
     train_label = np.array(train_label).T
 
     test_attributes = [test_csv_file[attr] for attr, usage in config["attribute"].items() if usage]
-    test_label = test_csv_file["label"] if config["label"] else ValueError("No label specified!")
-
     test_x = np.array(test_attributes).T
-    test_label = [1 if item == 'TOR' else 0 for item in test_label]
-    test_label = np.array(test_label).T
 
     def k_fold_cross_validation(k_fold, train_x, label):
         split = np.array_split(train_x, k_fold)
@@ -67,7 +63,7 @@ def main(args):
         total += score
     print("Ave: {:.6f}".format(total / args.k))
 
-    print("Test data fitting accuracy: {:.6f}".format(neigh.score(test_x, test_label)))
+    #print("Test data fitting accuracy: {:.6f}".format(neigh.score(test_x, test_label)))
 
 
 if __name__ == '__main__':
