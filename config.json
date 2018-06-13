@@ -1,0 +1,25 @@
+{
+    "Scenario-A": {
+        "attribute": {
+            "Flow IAT Min": true,
+            "Bwd IAT Std": true,
+            "Bwd IAT Mean": true,
+            "Bwd IAT Max": true
+        },
+        "label": true
+    },
+    "Scenario-B": {
+        "attribute": {
+            "Flow Duration": true,
+            "Flow Bytes/s": true,
+            "Flow IAT Mean": true,
+            "Flow IAT Max": true,
+            "Flow IAT Min": true,
+            "Fwd IAT Mean": true,
+            "Fwd IAT Max": true,
+            "Fwd IAT Min": true,
+            "Bwd IAT Min": true
+        },
+        "label": true
+    }
+}

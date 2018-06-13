@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import confusion_matrix, precision_score, recall_score
+import json
 import argparse
 
 
@@ -13,16 +14,13 @@ def main(args):
             Classifier: K nearest neighboring (K = 3), decision tree classifier
             Validation: 10-folded cross validation
     """
-    data = pd.read_csv('CSV/Scenario-A/SelectedFeatures-10s-TOR-NonTOR.csv')
+    csv_file = pd.read_csv(args.input_csv)
+    config = json.load(open(args.config))['Scenario-A']
 
-    # attributes
-    min_flowiat = data['Flow IAT Min']
-    std_biat = data['Bwd IAT Std']
-    mean_biat = data['Bwd IAT Mean']
-    max_biat = data['Bwd IAT Max']
-    label = data['label']
+    attributes = [csv_file[attr] for attr, usage in config["attribute"].items() if usage]
+    label = csv_file["label"] if config["label"] else ValueError("No label specified!")
 
-    train_x = np.array([min_flowiat, std_biat, mean_biat, max_biat]).T
+    train_x = np.array(attributes).T
     train_label = [1 if item == 'TOR' else 0 for item in label]
     train_label = np.array(train_label).T
 
@@ -67,6 +65,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser('Classifier for Scenario A')
     parser.add_argument('-k', default=10, type=int,
                         help='k folded cross validation')
+    parser.add_argument('--input-csv', default='CSV/Scenario-A/SelectedFeatures-10s-TOR-NonTOR.csv',
+                        help='input information from csv file')
+    parser.add_argument('--config', default='config.json',
+                        help='specify the selected feature')
     parser.add_argument('--arch', default='knn', type=str,
                         help='classification method')
     main(parser.parse_args())
