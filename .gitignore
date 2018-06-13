@@ -3,3 +3,4 @@ CICFlowMeter-3.0/
 .idea/
 __pycache__/
 pdf/
+*.csv
