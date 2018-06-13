@@ -23,7 +23,7 @@ def main(args):
     # labels
     label = csv_file["label"] if config["label"] else ValueError("No label specified!")
     labels = {'BROWSING': 0, 'AUDIO': 1, 'CHAT': 2, 'MAIL': 3, 'P2P': 4,
-              'FILE-TRANSFER': 5, 'VOIP':6, 'VIDEO': 7}
+              'FILE-TRANSFER': 5, 'VOIP': 6, 'VIDEO': 7}
 
     train_x = np.array(attributes).T
     train_label = [labels[item] for item in label]
