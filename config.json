@@ -6,7 +6,17 @@
             "Bwd IAT Mean": true,
             "Bwd IAT Max": true
         },
-        "Label": true
+        "Label": true,
+        "info": {
+            "Flow ID": true,
+            "Timestamp": true,
+            "Src IP": true,
+            "Src Port": true,
+            "Dst IP": true,
+            "Dst Port": true,
+            "Protocol": true,
+            "Flow Duration": true
+        }
     },
     "Scenario-B": {
         "attribute": {
@@ -20,6 +30,16 @@
             "Fwd IAT Min": true,
             "Bwd IAT Min": true
         },
-        "Label": true
+        "Label": true,
+        "info": {
+            "Flow ID": true,
+            "Timestamp": true,
+            "Src IP": true,
+            "Src Port": true,
+            "Dst IP": true,
+            "Dst Port": true,
+            "Protocol": true,
+            "Flow Duration": true
+        }
     }
 }

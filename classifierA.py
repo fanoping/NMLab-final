@@ -63,16 +63,33 @@ def main(args):
         total += score
     print("Ave: {:.6f}".format(total / args.k))
 
-    #print("Test data fitting accuracy: {:.6f}".format(neigh.score(test_x, test_label)))
+    output_data = {}
+    attributes = [test_csv_file[attr] for attr, usage in config["info"].items() if usage]
+    attributes_name = [attr for attr, usage in config["info"].items() if usage][1:]
+    attributes = list(zip(*attributes))
+
+    predict = neigh.predict(test_x)
+    for idx, attr in enumerate(attributes):
+        flow_id = attr[0]
+        attr = attr[1:]
+        output_data[flow_id] = {}
+        for index, name in enumerate(attributes_name):
+            output_data[flow_id][name] = attr[index]
+        output_data[flow_id]['Result'] = 'TOR' if predict[idx] else 'nonTOR'
+
+    with open("exampleA.json", "w") as f:
+        json.dump(output_data, f, indent=4, sort_keys=False)
+
+    return output_data
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Classifier for Scenario A')
-    parser.add_argument('-k', default=5, type=int,
+    parser.add_argument('-k', default=2, type=int,
                         help='k folded cross validation')
     parser.add_argument('--train-csv', default='CSV/Scenario-A/SelectedFeatures-10s-TOR-NonTOR.csv',
                         help='input information from csv file for training')
-    parser.add_argument('--test-csv', default='realtime.pcap_Flow.csv',
+    parser.add_argument('--test-csv', default='realtime0.pcap_Flow.csv',
                         help='input information from csv file for testing')
     parser.add_argument('--config', default='config.json',
                         help='specify the selected feature')

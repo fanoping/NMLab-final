@@ -1,0 +1,52 @@
+{
+    "192.168.42.140-192.30.253.113-39134-443-6": {
+        "Timestamp": "13/06/2018 07:27:48 PM",
+        "Src IP": "192.168.42.140",
+        "Src Port": 39134,
+        "Dst IP": "192.30.253.113",
+        "Dst Port": 443,
+        "Protocol": 6,
+        "Flow Duration": 2560346,
+        "Result": "nonTOR"
+    },
+    "172.217.160.78-192.168.42.140-443-53073-17": {
+        "Timestamp": "13/06/2018 07:27:51 PM",
+        "Src IP": "192.168.42.140",
+        "Src Port": 53073,
+        "Dst IP": "172.217.160.78",
+        "Dst Port": 443,
+        "Protocol": 17,
+        "Flow Duration": 55017,
+        "Result": "nonTOR"
+    },
+    "192.168.42.140-216.58.200.35-38667-443-17": {
+        "Timestamp": "13/06/2018 07:27:51 PM",
+        "Src IP": "192.168.42.140",
+        "Src Port": 38667,
+        "Dst IP": "216.58.200.35",
+        "Dst Port": 443,
+        "Protocol": 17,
+        "Flow Duration": 110942,
+        "Result": "nonTOR"
+    },
+    "8.0.6.4-8.6.0.1-0-0-0": {
+        "Timestamp": "13/06/2018 07:27:53 PM",
+        "Src IP": "8.6.0.1",
+        "Src Port": 0,
+        "Dst IP": "8.0.6.4",
+        "Dst Port": 0,
+        "Protocol": 0,
+        "Flow Duration": 14,
+        "Result": "nonTOR"
+    },
+    "192.168.42.129-192.168.42.140-53-50315-17": {
+        "Timestamp": "13/06/2018 07:27:48 PM",
+        "Src IP": "192.168.42.140",
+        "Src Port": 50315,
+        "Dst IP": "192.168.42.129",
+        "Dst Port": 53,
+        "Protocol": 17,
+        "Flow Duration": 7082075,
+        "Result": "TOR"
+    }
+}

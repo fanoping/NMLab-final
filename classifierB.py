@@ -24,7 +24,6 @@ def main(args):
     test_attributes = [test_csv_file[attr] for attr, usage in config["attribute"].items() if usage]
 
     # labels
-
     label = csv_file["Label"] if config["Label"] else ValueError("No label specified!")
 
     labels = {'BROWSING': 0, 'AUDIO': 1, 'CHAT': 2, 'MAIL': 3, 'P2P': 4,
@@ -74,8 +73,25 @@ def main(args):
         total += score
     print("Ave:", total/args.k)
 
-    #print("Test data fitting accuracy: {:.6f}".format(neigh.score(test_x, test_label)))
+    output_data = {}
+    predict = neigh.predict(test_x)
+    print(predict)
+    attributes = [test_csv_file[attr] for attr, usage in config["info"].items() if usage]
+    attributes_name = [attr for attr, usage in config["info"].items() if usage][1:]
+    attributes = list(zip(*attributes))
 
+    for idx, attr in enumerate(attributes):
+        flow_id = attr[0]
+        attr = attr[1:]
+        output_data[flow_id] = {}
+        for index, name in enumerate(attributes_name):
+            output_data[flow_id][name] = attr[index]
+        output_data[flow_id]['Result'] = [key for key, value in labels.items() if predict[idx] == value][0]
+
+    with open("exampleB.json", "w") as f:
+        json.dump(output_data, f, indent=4, sort_keys=False)
+
+    return output_data
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Classifier for Scenario B')

@@ -1,0 +1,92 @@
+{
+    "151.101.76.133-192.168.42.185-443-36744-6": {
+        "Timestamp": "13/06/2018 03:08:21 PM",
+        "Src IP": "192.168.42.185",
+        "Src Port": 36744,
+        "Dst IP": "151.101.76.133",
+        "Dst Port": 443,
+        "Protocol": 6,
+        "Flow Duration": 135145,
+        "Result": "BROWSING"
+    },
+    "192.168.42.185-74.125.204.188-56586-443-6": {
+        "Timestamp": "13/06/2018 03:08:25 PM",
+        "Src IP": "192.168.42.185",
+        "Src Port": 56586,
+        "Dst IP": "74.125.204.188",
+        "Dst Port": 443,
+        "Protocol": 6,
+        "Flow Duration": 24440,
+        "Result": "FILE-TRANSFER"
+    },
+    "172.217.27.131-192.168.42.185-443-53904-17": {
+        "Timestamp": "13/06/2018 03:08:07 PM",
+        "Src IP": "192.168.42.185",
+        "Src Port": 53904,
+        "Dst IP": "172.217.27.131",
+        "Dst Port": 443,
+        "Protocol": 17,
+        "Flow Duration": 50541,
+        "Result": "BROWSING"
+    },
+    "192.168.42.185-54.225.215.73-49196-443-6": {
+        "Timestamp": "13/06/2018 03:08:33 PM",
+        "Src IP": "192.168.42.185",
+        "Src Port": 49196,
+        "Dst IP": "54.225.215.73",
+        "Dst Port": 443,
+        "Protocol": 6,
+        "Flow Duration": 641190,
+        "Result": "AUDIO"
+    },
+    "8.0.6.4-8.6.0.1-0-0-0": {
+        "Timestamp": "13/06/2018 03:08:08 PM",
+        "Src IP": "8.6.0.1",
+        "Src Port": 0,
+        "Dst IP": "8.0.6.4",
+        "Dst Port": 0,
+        "Protocol": 0,
+        "Flow Duration": 16432740,
+        "Result": "BROWSING"
+    },
+    "151.101.76.133-192.168.42.185-443-36786-6": {
+        "Timestamp": "13/06/2018 03:08:07 PM",
+        "Src IP": "192.168.42.185",
+        "Src Port": 36786,
+        "Dst IP": "151.101.76.133",
+        "Dst Port": 443,
+        "Protocol": 6,
+        "Flow Duration": 117515,
+        "Result": "BROWSING"
+    },
+    "151.101.76.133-192.168.42.185-443-36742-6": {
+        "Timestamp": "13/06/2018 03:08:19 PM",
+        "Src IP": "192.168.42.185",
+        "Src Port": 36742,
+        "Dst IP": "151.101.76.133",
+        "Dst Port": 443,
+        "Protocol": 6,
+        "Flow Duration": 116505,
+        "Result": "BROWSING"
+    },
+    "151.101.72.133-192.168.42.185-443-40368-6": {
+        "Timestamp": "13/06/2018 03:08:23 PM",
+        "Src IP": "192.168.42.185",
+        "Src Port": 40368,
+        "Dst IP": "151.101.72.133",
+        "Dst Port": 443,
+        "Protocol": 6,
+        "Flow Duration": 130384,
+        "Result": "BROWSING"
+    },
+    "192.168.42.185-52.21.3.46-56208-443-6": {
+        "Timestamp": "13/06/2018 03:08:15 PM",
+        "Src IP": "192.168.42.185",
+        "Src Port": 56208,
+        "Dst IP": "52.21.3.46",
+        "Dst Port": 443,
+        "Protocol": 6,
+        "Flow Duration": 296750,
+        "Result": "BROWSING"
+    }
+}
