@@ -17,6 +17,7 @@ def main(args):
     """
     csv_file = pd.read_csv(args.train_csv)
     test_csv_file = pd.read_csv(args.test_csv)
+
     config = json.load(open(args.config))['Scenario-B']
 
     attributes = [csv_file[attr] for attr, usage in config["attribute"].items() if usage]
@@ -25,6 +26,7 @@ def main(args):
     # labels
     label = csv_file["label"] if config["label"] else ValueError("No label specified!")
     test_label = test_csv_file["label"] if config["label"] else ValueError("No label specified!")
+
     labels = {'BROWSING': 0, 'AUDIO': 1, 'CHAT': 2, 'MAIL': 3, 'P2P': 4,
               'FILE-TRANSFER': 5, 'VOIP': 6, 'VIDEO': 7, 'No Label': 8}
 

@@ -6234,3 +6234,236 @@
 2018-06-13 15:14:04 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
 2018-06-13 15:14:04 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
 2018-06-13 15:14:04 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on ../../realtime.pcap
+2018-06-13 16:42:44 INFO  cic.cs.unb.ca.ifm.Cmd    You select: ../../realtime.pcap
+2018-06-13 16:42:44 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: ../../CSV/Scenario-C/
+2018-06-13 16:42:44 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2018-06-13 16:42:45 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 6 flow
+2018-06-13 16:42:45 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 6 flow
+2018-06-13 16:42:45 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Invalid [0,56,56) range.
+JMemory: JMemory@7f6cc857e0daclass org.jnetpcap.protocol.network.Ip4: size=20 bytes
+JMemory: owner=nio.JMemoryPool$Block.class(size=32768/offset=15210)
+********************************************************************************
+0000:*4e fd a3 f6  80 f9 7a b8  fb 94 d9 d9  08 06 00 01    N.....z.........
+0010: 08 00 06 04  00 01 7a b8  fb 94 d9 d9  c0 a8 2a 81    ......z.......*.
+0020: 00 00 00 00  00 00 c0 a8  2a 66                       ........*f      
+
+
+2018-06-13 16:42:45 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on ../../realtime.pcap
+2018-06-13 17:05:24 INFO  cic.cs.unb.ca.ifm.Cmd    You select: ../../realtime.pcap
+2018-06-13 17:05:24 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: ../../CSV/Scenario-C/
+2018-06-13 17:05:24 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2018-06-13 17:05:25 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 5 flow
+2018-06-13 17:05:25 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 5 flow
+2018-06-13 17:05:25 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 6 flow
+2018-06-13 17:05:25 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 6 flow
+2018-06-13 17:05:25 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Invalid [0,56,56) range.
+JMemory: JMemory@7feb345f9e0cclass org.jnetpcap.protocol.network.Ip4: size=20 bytes
+JMemory: owner=nio.JMemoryPool$Block.class(size=32768/offset=20188)
+********************************************************************************
+0000:*4e fd a3 f6  80 f9 7a b8  fb 94 d9 d9  08 06 00 01    N.....z.........
+0010: 08 00 06 04  00 01 7a b8  fb 94 d9 d9  c0 a8 2a 81    ......z.......*.
+0020: 00 00 00 00  00 00 c0 a8  2a 66                       ........*f      
+
+
+2018-06-13 17:05:25 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on ../../realtime.pcap
+2018-06-13 17:09:42 INFO  cic.cs.unb.ca.ifm.Cmd    You select: ../../realtime.pcap
+2018-06-13 17:09:42 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: ../../CSV/Scenario-C/
+2018-06-13 17:09:42 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2018-06-13 17:09:42 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Invalid [0,56,56) range.
+JMemory: JMemory@7fe2ac4bb49eclass org.jnetpcap.protocol.network.Ip4: size=20 bytes
+JMemory: owner=nio.JMemoryPool$Block.class(size=32768/offset=1134)
+********************************************************************************
+0000:*4e fd a3 f6  80 f9 7a b8  fb 94 d9 d9  08 06 00 01    N.....z.........
+0010: 08 00 06 04  00 01 7a b8  fb 94 d9 d9  c0 a8 2a 81    ......z.......*.
+0020: 00 00 00 00  00 00 c0 a8  2a 66                       ........*f      
+
+
+2018-06-13 17:09:42 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Invalid [0,56,56) range.
+JMemory: JMemory@7fe2ac4bbbc4class org.jnetpcap.protocol.network.Ip4: size=20 bytes
+JMemory: owner=nio.JMemoryPool$Block.class(size=32768/offset=2964)
+********************************************************************************
+0000:*4e fd a3 f6  80 f9 7a b8  fb 94 d9 d9  08 06 00 01    N.....z.........
+0010: 08 00 06 04  00 01 7a b8  fb 94 d9 d9  c0 a8 2a 81    ......z.......*.
+0020: 00 00 00 00  00 00 c0 a8  2a 66                       ........*f      
+
+
+2018-06-13 17:09:42 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 8 flow
+2018-06-13 17:09:43 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 8 flow
+2018-06-13 17:09:43 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Invalid [0,56,56) range.
+JMemory: JMemory@7fe2ac4be568class org.jnetpcap.protocol.network.Ip4: size=20 bytes
+JMemory: owner=nio.JMemoryPool$Block.class(size=32768/offset=13624)
+********************************************************************************
+0000:*4e fd a3 f6  80 f9 7a b8  fb 94 d9 d9  08 06 00 01    N.....z.........
+0010: 08 00 06 04  00 01 7a b8  fb 94 d9 d9  c0 a8 2a 81    ......z.......*.
+0020: 00 00 00 00  00 00 c0 a8  2a 66                       ........*f      
+
+
+2018-06-13 17:09:43 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Invalid [0,56,56) range.
+JMemory: JMemory@7fe2ac4bf818class org.jnetpcap.protocol.network.Ip4: size=20 bytes
+JMemory: owner=nio.JMemoryPool$Block.class(size=32768/offset=18408)
+********************************************************************************
+0000:*4e fd a3 f6  80 f9 7a b8  fb 94 d9 d9  08 06 00 01    N.....z.........
+0010: 08 00 06 04  00 01 7a b8  fb 94 d9 d9  c0 a8 2a 81    ......z.......*.
+0020: 00 00 00 00  00 00 c0 a8  2a 66                       ........*f      
+
+
+2018-06-13 17:09:43 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 9 flow
+2018-06-13 17:09:43 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 9 flow
+2018-06-13 17:09:43 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on ../../realtime.pcap
+2018-06-13 17:11:12 INFO  cic.cs.unb.ca.ifm.Cmd    You select: ../../realtime.pcap
+2018-06-13 17:11:12 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: ../../CSV/Scenario-C/
+2018-06-13 17:11:13 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2018-06-13 17:11:13 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Invalid [0,56,56) range.
+JMemory: JMemory@0class org.jnetpcap.protocol.network.Ip4: size=0 bytes
+JMemory: owner=null.class
+********************************************************************************
+0000:*4e fd a3 f6  80 f9 7a b8  fb 94 d9 d9  08 06 00 01    N.....z.........
+0010: 08 00 06 04  00 01 7a b8  fb 94 d9 d9  c0 a8 2a 81    ......z.......*.
+0020: 00 00 00 00  00 00 c0 a8  2a 66                       ........*f      
+
+
+2018-06-13 17:11:13 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Invalid [0,56,56) range.
+JMemory: JMemory@7f9ba454fee6class org.jnetpcap.protocol.network.Ip4: size=20 bytes
+JMemory: owner=nio.JMemoryPool$Block.class(size=32768/offset=11238)
+********************************************************************************
+0000:*4e fd a3 f6  80 f9 7a b8  fb 94 d9 d9  08 06 00 01    N.....z.........
+0010: 08 00 06 04  00 01 7a b8  fb 94 d9 d9  c0 a8 2a 81    ......z.......*.
+0020: 00 00 00 00  00 00 c0 a8  2a 66                       ........*f      
+
+
+2018-06-13 17:11:13 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Invalid [0,56,56) range.
+JMemory: JMemory@7f9ba45533f0class org.jnetpcap.protocol.network.Ip4: size=20 bytes
+JMemory: owner=nio.JMemoryPool$Block.class(size=32768/offset=24816)
+********************************************************************************
+0000:*4e fd a3 f6  80 f9 7a b8  fb 94 d9 d9  08 06 00 01    N.....z.........
+0010: 08 00 06 04  00 01 7a b8  fb 94 d9 d9  c0 a8 2a 81    ......z.......*.
+0020: 00 00 00 00  00 00 c0 a8  2a 66                       ........*f      
+
+
+2018-06-13 17:11:13 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on ../../realtime.pcap
+2018-06-13 17:17:27 INFO  cic.cs.unb.ca.ifm.Cmd    You select: ../../realtime.pcap
+2018-06-13 17:17:27 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: ../../CSV/Scenario-C/
+2018-06-13 17:17:28 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2018-06-13 17:17:28 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Invalid [0,56,56) range.
+JMemory: JMemory@7f49685ddcd8class org.jnetpcap.protocol.network.Ip4: size=20 bytes
+JMemory: owner=nio.JMemoryPool$Block.class(size=32768/offset=3544)
+********************************************************************************
+0000:*4e fd a3 f6  80 f9 7a b8  fb 94 d9 d9  08 06 00 01    N.....z.........
+0010: 08 00 06 04  00 01 7a b8  fb 94 d9 d9  c0 a8 2a 81    ......z.......*.
+0020: 00 00 00 00  00 00 c0 a8  2a 66                       ........*f      
+
+
+2018-06-13 17:17:28 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Invalid [0,56,56) range.
+JMemory: JMemory@7f49685df3e2class org.jnetpcap.protocol.network.Ip4: size=20 bytes
+JMemory: owner=nio.JMemoryPool$Block.class(size=32768/offset=9442)
+********************************************************************************
+0000:*4e fd a3 f6  80 f9 7a b8  fb 94 d9 d9  08 06 00 01    N.....z.........
+0010: 08 00 06 04  00 01 7a b8  fb 94 d9 d9  c0 a8 2a 81    ......z.......*.
+0020: 00 00 00 00  00 00 c0 a8  2a 66                       ........*f      
+
+
+2018-06-13 17:17:28 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 8 flow
+2018-06-13 17:17:28 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 8 flow
+2018-06-13 17:17:28 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Invalid [0,56,56) range.
+JMemory: JMemory@7f49685e4076class org.jnetpcap.protocol.network.Ip4: size=20 bytes
+JMemory: owner=nio.JMemoryPool$Block.class(size=32768/offset=29046)
+********************************************************************************
+0000:*4e fd a3 f6  80 f9 7a b8  fb 94 d9 d9  08 06 00 01    N.....z.........
+0010: 08 00 06 04  00 01 7a b8  fb 94 d9 d9  c0 a8 2a 81    ......z.......*.
+0020: 00 00 00 00  00 00 c0 a8  2a 66                       ........*f      
+
+
+2018-06-13 17:17:28 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on ../../realtime.pcap
+2018-06-13 17:18:10 INFO  cic.cs.unb.ca.ifm.Cmd    You select: ../../realtime.pcap
+2018-06-13 17:18:10 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: ../../CSV/Scenario-C/
+2018-06-13 17:18:10 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2018-06-13 17:18:11 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2018-06-13 17:18:11 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2018-06-13 17:18:11 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 8 flow
+2018-06-13 17:18:11 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 8 flow
+2018-06-13 17:18:11 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on ../../realtime.pcap
+2018-06-13 17:20:07 INFO  cic.cs.unb.ca.ifm.Cmd    You select: ../../realtime.pcap
+2018-06-13 17:20:07 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: ../../CSV/Scenario-C/
+2018-06-13 17:20:07 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2018-06-13 17:20:08 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2018-06-13 17:20:08 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 5 flow
+2018-06-13 17:20:08 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 5 flow
+2018-06-13 17:20:08 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 7 flow
+2018-06-13 17:20:08 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 7 flow
+2018-06-13 17:20:08 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on ../../realtime.pcap
+2018-06-13 17:22:34 INFO  cic.cs.unb.ca.ifm.Cmd    You select: ../../realtime.pcap
+2018-06-13 17:22:34 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: ../../CSV/Scenario-C/
+2018-06-13 17:22:34 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2018-06-13 17:22:35 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Invalid [0,56,56) range.
+JMemory: JMemory@7fc2e04a733cclass org.jnetpcap.protocol.network.Ip4: size=20 bytes
+JMemory: owner=nio.JMemoryPool$Block.class(size=32768/offset=8476)
+********************************************************************************
+0000:*4e fd a3 f6  80 f9 7a b8  fb 94 d9 d9  08 06 00 01    N.....z.........
+0010: 08 00 06 04  00 01 7a b8  fb 94 d9 d9  c0 a8 2a 81    ......z.......*.
+0020: 00 00 00 00  00 00 c0 a8  2a 66                       ........*f      
+
+
+2018-06-13 17:22:35 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 7 flow
+2018-06-13 17:22:35 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 7 flow
+2018-06-13 17:22:35 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on ../../realtime.pcap
+2018-06-13 17:23:47 INFO  cic.cs.unb.ca.ifm.Cmd    You select: ../../Pcaps/tor/CHAT_aimchatgateway.pcap
+2018-06-13 17:23:47 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: ../../CSV/Scenario-C/
+2018-06-13 17:23:47 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2018-06-13 17:23:48 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    null
+********************************************************************************
+0000:*52 54 00 12  35 02 08 00* 27 86 44 cf  08 06 00 01    RT..5...'.D.....
+0010: 08 00 06 04  00 01 08 00  27 86 44 cf  0a 00 02 0f    ........'.D.....
+0020: 00 00 00 00  00 00 0a 00  02 02*                      ..........      
+
+
+2018-06-13 17:23:48 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    null
+********************************************************************************
+0000:*52 54 00 12  35 02 08 00* 27 86 44 cf  08 06 00 01    RT..5...'.D.....
+0010: 08 00 06 04  00 01 08 00  27 86 44 cf  0a 00 02 0f    ........'.D.....
+0020: 00 00 00 00  00 00 0a 00  02 02*                      ..........      
+
+
+2018-06-13 17:23:48 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    null
+********************************************************************************
+0000:*52 54 00 12  35 02 08 00* 27 86 44 cf  08 06 00 01    RT..5...'.D.....
+0010: 08 00 06 04  00 01 08 00  27 86 44 cf  0a 00 02 0f    ........'.D.....
+0020: 00 00 00 00  00 00 0a 00  02 02*                      ..........      
+
+
+2018-06-13 17:23:48 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    null
+********************************************************************************
+0000:*52 54 00 12  35 02 08 00* 27 86 44 cf  08 06 00 01    RT..5...'.D.....
+0010: 08 00 06 04  00 01 08 00  27 86 44 cf  0a 00 02 0f    ........'.D.....
+0020: 00 00 00 00  00 00 0a 00  02 02*                      ..........      
+
+
+2018-06-13 17:23:48 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    null
+********************************************************************************
+0000:*52 54 00 12  35 02 08 00* 27 86 44 cf  08 06 00 01    RT..5...'.D.....
+0010: 08 00 06 04  00 01 08 00  27 86 44 cf  0a 00 02 0f    ........'.D.....
+0020: 00 00 00 00  00 00 0a 00  02 02*                      ..........      
+
+
+2018-06-13 17:23:48 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    null
+********************************************************************************
+0000:*52 54 00 12  35 02 08 00* 27 86 44 cf  08 06 00 01    RT..5...'.D.....
+0010: 08 00 06 04  00 01 08 00  27 86 44 cf  0a 00 02 0f    ........'.D.....
+0020: 00 00 00 00  00 00 0a 00  02 02*                      ..........      
+
+
+2018-06-13 17:23:48 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    null
+********************************************************************************
+0000:*52 54 00 12  35 02 08 00* 27 86 44 cf  08 06 00 01    RT..5...'.D.....
+0010: 08 00 06 04  00 01 08 00  27 86 44 cf  0a 00 02 0f    ........'.D.....
+0020: 00 00 00 00  00 00 0a 00  02 02*                      ..........      
+
+
+2018-06-13 17:23:48 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on ../../Pcaps/tor/CHAT_aimchatgateway.pcap
+2018-06-13 17:35:04 INFO  cic.cs.unb.ca.ifm.Cmd    You select: ../../realtime.pcap
+2018-06-13 17:35:04 INFO  cic.cs.unb.ca.ifm.Cmd    Out folder: ../../CSV/Scenario-C/
+2018-06-13 17:35:05 INFO  cic.cs.unb.ca.ifm.Cmd    CICFlowMeter received 1 pcap file
+2018-06-13 17:35:05 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2018-06-13 17:35:05 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 3 flow
+2018-06-13 17:35:05 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2018-06-13 17:35:05 DEBUG cic.cs.unb.ca.jnetpcap.FlowGenerator    FlagFIN current has 4 flow
+2018-06-13 17:35:05 DEBUG cic.cs.unb.ca.jnetpcap.PacketReader    Read All packets on ../../realtime.pcap
