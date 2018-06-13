@@ -26,7 +26,7 @@ def main(args):
     label = csv_file["label"] if config["label"] else ValueError("No label specified!")
     test_label = test_csv_file["label"] if config["label"] else ValueError("No label specified!")
     labels = {'BROWSING': 0, 'AUDIO': 1, 'CHAT': 2, 'MAIL': 3, 'P2P': 4,
-              'FILE-TRANSFER': 5, 'VOIP': 6, 'VIDEO': 7}
+              'FILE-TRANSFER': 5, 'VOIP': 6, 'VIDEO': 7, 'No Label': 8}
 
     train_x = np.array(attributes).T
     train_label = [labels[item] for item in label]
@@ -74,7 +74,7 @@ def main(args):
         total += score
     print("Ave:", total/args.k)
 
-    print("Test data fitting accuracy: {:.6f}".format(neigh.score(test_x, test_label)))
+    #print("Test data fitting accuracy: {:.6f}".format(neigh.score(test_x, test_label)))
 
 
 if __name__ == '__main__':
