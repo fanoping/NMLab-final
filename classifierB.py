@@ -66,17 +66,16 @@ def main(args):
         neigh.fit(train, train_label)
         score = neigh.score(valid, valid_label)
 
-        print('{} fold:'.format(idx + 1))
-        print('\tAccuracy: {:.6f}'.format(score))
+        # print('{} fold:'.format(idx + 1))
+        # print('\tAccuracy: {:.6f}'.format(score))
         # print('\tPrecision: {:.6f}'.format(precision_score(valid_label, neigh.predict(valid), average='micro')))
         # print('\tRecall: {:.6f}'.format(recall_score(valid_label, neigh.predict(valid), average='micro')))
 
         total += score
-    print("Ave:", total/args.k)
+    print("{} folded validation average accuracy: {:.6f}".format(args.k, total / args.k))
 
     output_data = {}
     predict = neigh.predict(test_x)
-    print(predict)
     attributes = [test_csv_file[attr] for attr, usage in config["info"].items() if usage]
     attributes_name = [attr for attr, usage in config["info"].items() if usage][1:]
     attributes = list(zip(*attributes))
