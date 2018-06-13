@@ -23,12 +23,12 @@ def main(args):
         tmp = os.popen('ifconfig').read()
         INTERFACE = tmp.split()[0]
         IP = os.popen('hostname -I').read().strip()
-        os.chdir(BIN)
         kill_signal = False
 
         while not kill_signal:
             try:
                 PCAP = "realtime{}.pcap".format(cnt)
+                os.chdir(BIN)
                 input_dir = os.path.join("../..", "Pcaps/realtime", PCAP)
                 output_dir = os.path.join("../..", args.output)
                 print("sudo tcpdump -i {} -c {} host {} -w {}".format(INTERFACE,
@@ -37,6 +37,9 @@ def main(args):
                 os.system("./cfm {} {}".format(input_dir, output_dir))
                 csv_name = args.output + PCAP + "_Flow.csv"
                 cnt += 1
+                os.chdir('../..')
+                os.system("python3 classifierA.py -k 10 --test-csv {} ".format(csv_name))
+                os.system("python3 classifierB.py -k 10 --test-csv {} ".format(csv_name))
             except KeyboardInterrupt:
                 print('interrupted!')
                 kill_signal = True
@@ -52,10 +55,10 @@ def main(args):
         print("csv_name: ", csv_name)
         os.system("./cfm {} {}".format(input_dir, output_dir))
     
-    # pcap to csv 
-    # os.chdir('../..')
-    # os.system("python3 classifierA.py -k 10 --test-csv {} ".format(csv_name))
-    # os.system("python3 classifierB.py -k 10 --test-csv {} ".format(csv_name))
+        # pcap to csv 
+        os.chdir('../..')
+        os.system("python3 classifierA.py -k 10 --test-csv {} ".format(csv_name))
+        os.system("python3 classifierB.py -k 10 --test-csv {} ".format(csv_name))
 
 if __name__ == "__main__":
     args = ArgumentParser()
