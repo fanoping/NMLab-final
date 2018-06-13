@@ -38,8 +38,8 @@ def main(args):
                 csv_name = args.output + PCAP + "_Flow.csv"
                 cnt += 1
                 os.chdir('../..')
-                os.system("python3 classifierA.py -k 10 --test-csv {} ".format(csv_name))
-                os.system("python3 classifierB.py -k 10 --test-csv {} ".format(csv_name))
+                os.system("python3 classifierA.py -k 5 --test-csv {} ".format(csv_name))
+                os.system("python3 classifierB.py -k 5 --test-csv {} ".format(csv_name))
             except KeyboardInterrupt:
                 print('interrupted!')
                 kill_signal = True
@@ -57,8 +57,8 @@ def main(args):
     
         # pcap to csv 
         os.chdir('../..')
-        os.system("python3 classifierA.py -k 10 --test-csv {} ".format(csv_name))
-        os.system("python3 classifierB.py -k 10 --test-csv {} ".format(csv_name))
+        os.system("python3 classifierA.py -k 5 --test-csv {} ".format(csv_name))
+        os.system("python3 classifierB.py -k 5 --test-csv {} ".format(csv_name))
 
 if __name__ == "__main__":
     args = ArgumentParser()

@@ -79,7 +79,7 @@ def main(args):
         output_data[flow_id]['Result'] = 'TOR' if predict[idx] else 'nonTOR'
 
     _, filename = os.path.split(args.test_csv)
-    with open("output/ScenarioA/{}.json".format(filename[:-4]), "w") as f:
+    with open("output/scenarioA/{}.json".format(filename[:-4]), "w") as f:
         json.dump(output_data, f, indent=4, sort_keys=False)
 
     return output_data

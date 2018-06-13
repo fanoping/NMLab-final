@@ -90,7 +90,7 @@ def main(args):
         output_data[flow_id]['Result'] = [key for key, value in labels.items() if predict[idx] == value][0]
 
     _, filename = os.path.split(args.test_csv)
-    with open("output/scenarioB/.json".format(filename[:-4]), "w") as f:
+    with open("output/scenarioB/{}.json".format(filename[:-4]), "w") as f:
         json.dump(output_data, f, indent=4, sort_keys=False)
 
     return output_data
