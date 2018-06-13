@@ -15,21 +15,31 @@ def ArgumentParser():
 
 def main(args):
     BIN = './CICFlowMeter-4.0/bin'
+    
     # realtime
     if args.action == 'realtime':
         print('=== realtime version ===')
+        cnt = 0
         tmp = os.popen('ifconfig').read()
-        interface = tmp.split()[0]
-        IPaddress = os.popen('hostname -I').read().strip()
-        while True:
-            print("sudo tcpdump -i {} -c {} host {} -w realtime.pcap ".format(interface,
-                                                                            args.packet_cnt, IPaddress))
-            os.system("sudo tcpdump  -c {} host {} -w realtime.pcap ".format( args.packet_cnt, IPaddress))
-            os.chdir(BIN)
-            input_dir = os.path.join("../..", "realtime.pcap")
-            output_dir = os.path.join("../..", args.output)
-            csv_name = args.output + "realtime.pcap" + "_Flow.csv"
-            os.system("./cfm {} {}".format(input_dir, output_dir))
+        INTERFACE = tmp.split()[0]
+        IP = os.popen('hostname -I').read().strip()
+        os.chdir(BIN)
+        kill_signal = False
+
+        while not kill_signal:
+            try:
+                PCAP = "realtime{}.pcap".format(cnt)
+                input_dir = os.path.join("../..", "Pcaps/realtime", PCAP)
+                output_dir = os.path.join("../..", args.output)
+                print("sudo tcpdump -i {} -c {} host {} -w {}".format(INTERFACE,
+                                                                    args.packet_cnt, IP, input_dir))
+                os.system("sudo tcpdump -c {} host {} -w {}".format(args.packet_cnt, IP, input_dir))
+                os.system("./cfm {} {}".format(input_dir, output_dir))
+                csv_name = args.output + PCAP + "_Flow.csv"
+                cnt += 1
+            except KeyboardInterrupt:
+                print('interrupted!')
+                kill_signal = True
 
     # offtime
     else:
