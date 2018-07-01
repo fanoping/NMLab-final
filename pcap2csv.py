@@ -31,11 +31,11 @@ def main(args):
                 os.chdir(BIN)
                 input_dir = os.path.join("../..", "Pcaps/realtime", PCAP)
                 output_dir = os.path.join("../..", args.output)
-                print('======  {}  ======'.format(PCAP))
+                print('======  pcap name: {}  ======'.format(PCAP))
                 print('IP address: ', IP)
                 print('Interface: ', INTERFACE)
                 print('# packets: ', args.packet_cnt)
-
+            
                 os.system("sudo tcpdump -c {} host {} -w {}".format(args.packet_cnt, IP, input_dir))
                 os.system("./cfm {} {}".format(input_dir, output_dir))
                 csv_name = args.output + PCAP + "_Flow.csv"
@@ -53,15 +53,20 @@ def main(args):
         os.chdir(BIN)
         input_dir = os.path.join("../..", args.input)
         output_dir = os.path.join("../..", args.output)
-        pcap_name = args.input[args.input.rfind('/')+1:]
-        csv_name = args.output + pcap_name + "_Flow.csv"
-        print("csv_name: ", csv_name)
+        if os.path.isdir(input_dir):
+            pcap_list = os.listdir(input_dir)
+        else:
+            _, pcap_name = os.path.split(args.input)
+            pcap_list = [pcap_name]
         os.system("./cfm {} {}".format(input_dir, output_dir))
-    
-        # pcap to csv 
-        os.chdir('../..')
-        os.system("python3 classifierA.py -k 5 --test-csv {} ".format(csv_name))
-        os.system("python3 classifierB.py -k 50 --test-csv {} ".format(csv_name))
+
+        for pcap in pcap_list:
+            os.chdir('../..')
+            csv_name = os.path.join(args.output, "{}_Flow.csv".format(pcap))
+            print("==== csv directoy: {} ====".format(csv_name))
+            os.system("python3 classifierA.py -k 5 --test-csv {} ".format(csv_name))
+            os.system("python3 classifierB.py -k 50 --test-csv {} ".format(csv_name))
+            os.chdir(BIN)
 
 if __name__ == "__main__":
     args = ArgumentParser()
