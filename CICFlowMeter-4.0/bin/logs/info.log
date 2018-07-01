@@ -125,3 +125,29 @@
 2018-06-13 17:35:04 - You select: ../../realtime.pcap
 2018-06-13 17:35:04 - Out folder: ../../CSV/Scenario-C/
 2018-06-13 17:35:05 - CICFlowMeter received 1 pcap file
+2018-07-01 22:30:11 - You select: ../../Pcaps/tor/
+2018-07-01 22:30:11 - Out folder: ../../test
+2018-07-01 22:33:35 - You select: ../../Pcaps/tor/
+2018-07-01 22:33:35 - Out folder: ../../CSV/Scenario-C
+2018-07-01 22:34:45 - You select: ../../Pcaps/tor/
+2018-07-01 22:34:45 - Out folder: ../../CSV/Scenario-C/
+2018-07-01 22:40:10 - You select: ../../Pcaps/tor
+2018-07-01 22:40:10 - Out folder: ../../CSV/Scenario-C/
+2018-07-01 22:41:37 - You select: ../../Pcaps/tor/CHAT_aimchatgateway.pcap
+2018-07-01 22:41:37 - Out folder: ../../CSV/Scenario-C/
+2018-07-01 22:41:38 - CICFlowMeter received 1 pcap file
+2018-07-01 22:45:37 - Please select output folder!
+2018-07-01 22:45:51 - You select: ../../Pcaps/tor/CHAT_aimchatgateway.pcap
+2018-07-01 22:45:51 - Out folder: ../../test
+2018-07-01 22:45:52 - CICFlowMeter received 1 pcap file
+2018-07-01 23:16:33 - You select: ../../Pcaps/tor/CHAT_aimchatgateway.pcap
+2018-07-01 23:16:33 - Out folder: ../../CSV/Scenario-C/
+2018-07-01 23:16:33 - CICFlowMeter received 1 pcap file
+2018-07-01 23:18:28 - You select: ../../Pcaps/tor/
+2018-07-01 23:18:28 - Out folder: ../../CSV/Scenario-C/
+2018-07-01 23:19:48 - You select: ../../Pcaps/tor/CHAT_aimchatgateway.pcap
+2018-07-01 23:19:48 - Out folder: ../../CSV/Scenario-C/
+2018-07-01 23:19:48 - CICFlowMeter received 1 pcap file
+2018-07-01 23:21:18 - You select: ../../Pcaps/tor/CHAT_aimchatgateway.pcap
+2018-07-01 23:21:18 - Out folder: ../../CSV/Scenario-C/
+2018-07-01 23:21:18 - CICFlowMeter received 1 pcap file

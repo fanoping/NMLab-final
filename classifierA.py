@@ -16,7 +16,9 @@ def main(args):
             Validation: 10-folded cross validation
     """
     train_csv_file = pd.read_csv(args.train_csv)
+    train_csv_file.columns = train_csv_file.columns.str.replace(' ', '')
     test_csv_file = pd.read_csv(args.test_csv)
+    test_csv_file.columns = test_csv_file.columns.str.replace(' ', '')
     config = json.load(open(args.config))['Scenario-A']
 
     attributes = [train_csv_file[attr] for attr, usage in config["attribute"].items() if usage]

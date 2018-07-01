@@ -1,45 +1,45 @@
 {
     "Scenario-A": {
         "attribute": {
-            "Flow IAT Min": true,
-            "Bwd IAT Std": true,
-            "Bwd IAT Mean": true,
-            "Bwd IAT Max": true
+            "FlowIATMin": true,
+            "BwdIATStd": true,
+            "BwdIATMean": true,
+            "BwdIATMax": true
         },
         "Label": true,
         "info": {
-            "Flow ID": true,
+            "FlowID": true,
             "Timestamp": true,
-            "Src IP": true,
-            "Src Port": true,
-            "Dst IP": true,
-            "Dst Port": true,
+            "SrcIP": true,
+            "SrcPort": true,
+            "DstIP": true,
+            "DstPort": true,
             "Protocol": true,
-            "Flow Duration": true
+            "FlowDuration": true
         }
     },
     "Scenario-B": {
         "attribute": {
-            "Flow Duration": true,
-            "Flow Byts/s": true,
-            "Flow IAT Mean": true,
-            "Flow IAT Max": true,
-            "Flow IAT Min": true,
-            "Fwd IAT Mean": true,
-            "Fwd IAT Max": true,
-            "Fwd IAT Min": true,
-            "Bwd IAT Min": true
+            "FlowDuration": true,
+            "FlowByts/s": true,
+            "FlowIATMean": true,
+            "FlowIATMax": true,
+            "FlowIATMin": true,
+            "FwdIATMean": true,
+            "FwdIATMax": true,
+            "FwdIATMin": true,
+            "BwdIATMin": true
         },
         "Label": true,
         "info": {
-            "Flow ID": true,
+            "FlowID": true,
             "Timestamp": true,
-            "Src IP": true,
-            "Src Port": true,
-            "Dst IP": true,
-            "Dst Port": true,
+            "SrcIP": true,
+            "SrcPort": true,
+            "DstIP": true,
+            "DstPort": true,
             "Protocol": true,
-            "Flow Duration": true
+            "FlowDuration": true
         }
     }
 }

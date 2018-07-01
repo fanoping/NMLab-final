@@ -17,7 +17,9 @@ def main(args):
             Validation: k-folded cross validation
     """
     csv_file = pd.read_csv(args.train_csv)
+    csv_file.columns = csv_file.columns.str.replace(' ', '')
     test_csv_file = pd.read_csv(args.test_csv)
+    test_csv_file.columns = test_csv_file.columns.str.replace(' ', '')
 
     config = json.load(open(args.config))['Scenario-B']
 
