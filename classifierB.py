@@ -4,10 +4,35 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, precision_score, recall_score
+import matplotlib.pyplot as plt
+import itertools
 import argparse
 import json
 import os
 
+
+def plot_confusion_matrix(cm, classes, cmap=plt.cm.Blues):
+    cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+    print("Confusion Matrix")
+    print(cm)
+
+    plt.imshow(cm, interpolation='nearest', cmap=cmap)
+    plt.title('Confusion matrix')
+    plt.colorbar()
+    tick_marks = np.arange(len(classes))
+    plt.xticks(tick_marks, classes, rotation=60)
+    plt.yticks(tick_marks, classes)
+
+    fmt = '.2f' 
+    thresh = cm.max() / 2.
+    for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
+        plt.text(j, i, format(cm[i, j], fmt),
+                 horizontalalignment="center",
+                 color="white" if cm[i, j] > thresh else "black")
+
+    plt.tight_layout()
+    plt.ylabel('True label')
+    plt.xlabel('Predicted label')
 
 def main(args):
     """
@@ -62,12 +87,11 @@ def main(args):
         raise NotImplementedError(args.arch)
 
     total = 0
-    for idx, (train, valid, train_label, valid_label) in enumerate(splitted_data):
+    for idx, (train, valid, train_labels, valid_label) in enumerate(splitted_data):
         train = np.concatenate(train)
-        train_label = np.concatenate(train_label)
-        neigh.fit(train, train_label)
+        train_labels = np.concatenate(train_labels)
+        neigh.fit(train, train_labels)
         score = neigh.score(valid, valid_label)
-
         # print('{} fold:'.format(idx + 1))
         # print('\tAccuracy: {:.6f}'.format(score))
         # print('\tPrecision: {:.6f}'.format(precision_score(valid_label, neigh.predict(valid), average='micro')))
@@ -81,6 +105,17 @@ def main(args):
     attributes = [test_csv_file[attr] for attr, usage in config["info"].items() if usage]
     attributes_name = [attr for attr, usage in config["info"].items() if usage][1:]
     attributes = list(zip(*attributes))
+
+    predict = neigh.predict(train_x)
+    print(predict)
+    print(train_label)
+    matrix = confusion_matrix(predict,train_label)
+    label_list = ['BROWSING', 'AUDIO', 'CHAT', 'MAIL', 'P2P',
+                  'FILE-TRANSFER','VOIP', 'VIDEO']
+    plt.figure()
+    plot_confusion_matrix(matrix, classes=label_list)
+    plt.savefig("confusion.png")
+
 
     for idx, attr in enumerate(attributes):
         flow_id = attr[0]
