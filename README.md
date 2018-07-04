@@ -30,3 +30,19 @@ convert network flow to csv files
         ```
             python classifierB.py -k 10 --input-csv [csv_file] --config [config.json] --arch [knn, tree, forest] 
         ```
+
+## 分工表
+    
+   * 温明浩: 前端網頁&後端server建立、後期debug
+
+   * 陳柏文: Python程式修飾、程式與server串接、後期debug
+
+   * 徐彥旻: 報告製作、Python程式修飾
+
+   * 周晁德: model撰寫&訓練
+
+   * 蔡昕宇: model撰寫&訓練
+
+   * 黃平瑋: pcap檔案分析與轉換
+
+   * 劉記良: 報告製作
